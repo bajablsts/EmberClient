@@ -1,0 +1,18 @@
+[app]
+name = "Ember"
+version = "0.1.0"
+user_agent = "ember-launcher/0.1.0 (contact: configure-before-release)"
+data_dir = "Ember"
+update_url = ""
+
+[branding]
+name = "Ember"
+primary_color = "#f97316"
+background_color = "#111318"
+logo_path = "/brand/ember-mark.svg"
+
+[auth]
+azure_client_id = ""
+
+[updates]
+channel = "stable"

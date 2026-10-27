@@ -1,0 +1,4 @@
+packages:
+  - launcher
+allowBuilds:
+  esbuild: true

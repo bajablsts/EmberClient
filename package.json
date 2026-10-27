@@ -1,0 +1,9 @@
+{
+  "name": "ember-workspace",
+  "private": true,
+  "packageManager": "pnpm@12.14.0",
+  "scripts": {
+    "test": "pnpm --filter @ember/launcher test",
+    "build": "pnpm --filter @ember/launcher build"
+  }
+}
