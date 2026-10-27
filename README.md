@@ -5,11 +5,13 @@ affiliated with Mojang or Microsoft and does not include Mojang assets.
 
 ## Current milestone
 
-The repository currently contains the M0 scaffold: a Tauri 2 desktop shell,
-React/TypeScript frontend, Rust test target, Java/Gradle core scaffold, and CI
-workflow. Authentication, installation, and game launching are not implemented
-yet. The Windows installer is a **preview desktop shell**, not a functioning
-game launcher. It must not be presented as ready to install or launch games.
+The repository currently contains a Tauri 2 desktop shell with a responsive
+launcher dashboard, preview profile page, persistent appearance settings,
+Rust test target, Java/Gradle core scaffold, and CI workflow. Authentication,
+installation, profile creation, mod management, and game launching are not
+implemented yet. The Windows installer is a **preview desktop shell**, not a
+functioning game launcher. It must not be presented as ready to install or
+launch games.
 
 ## Development
 
@@ -55,10 +57,9 @@ pnpm exec tauri build --bundles nsis
 In a hosted GitHub repository, pushing a `v*` tag runs
 [`windows-release.yml`](./.github/workflows/windows-release.yml), attaches the
 installer and checksum to a GitHub Release, and exposes the same files as a
-30-day Actions artifact for manual builds. A repository maintainer must publish
-the source repository and push the tag before a public download link exists.
-This workspace is not currently connected to a GitHub repository, so it has no
-public installer download yet.
+30-day Actions artifact for manual builds. The source is hosted at
+[bajablsts/EmberClient](https://github.com/bajablsts/EmberClient). A repository
+maintainer must push a `v*` tag before a public installer download exists.
 No signing certificate or publisher identity has been provided, so installers
 are unsigned.
 

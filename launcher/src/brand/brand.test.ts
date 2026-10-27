@@ -10,6 +10,7 @@ describe("parseBranding", () => {
 
     expect(branding).toEqual({
       name: "Ember",
+      version: "0.1.0",
       primaryColor: "#f97316",
       backgroundColor: "#111318",
       logoPath: "/brand/ember-mark.svg",
@@ -21,7 +22,10 @@ describe("parseBranding", () => {
 name = "Ember"
 primary_color = "orange"
 background_color = "#111318"
-logo_path = "/../secret.svg"`;
+logo_path = "/../secret.svg"
+
+[app]
+version = "1.0.0"`;
 
     expect(() => parseBranding(config)).toThrow("invalid or missing");
   });
@@ -31,14 +35,17 @@ logo_path = "/../secret.svg"`;
 name = "Ember"
 primary_color = "#f97316"
 background_color = "#111318"
-logo_path = "//example.invalid/logo.svg"`;
+logo_path = "//example.invalid/logo.svg"
+
+[app]
+version = "1.0.0"`;
 
     expect(() => parseBranding(config)).toThrow("invalid or missing");
   });
 
   it("rejects configs without branding", () => {
     expect(() => parseBranding("[app]\nname = 'Ember'")).toThrow(
-      "must contain a [branding] table",
+      "must contain [app] and [branding] tables",
     );
   });
 });

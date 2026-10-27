@@ -2,6 +2,7 @@ import { parse } from "smol-toml";
 
 export interface Branding {
   name: string;
+  version: string;
   primaryColor: string;
   backgroundColor: string;
   logoPath: string;
@@ -9,12 +10,15 @@ export interface Branding {
 
 export function parseBranding(source: string): Branding {
   const config: unknown = parse(source);
-  if (!isRecord(config) || !isRecord(config.branding)) {
-    throw new Error("Branding config must contain a [branding] table.");
+  if (!isRecord(config) || !isRecord(config.app) || !isRecord(config.branding)) {
+    throw new Error("Branding config must contain [app] and [branding] tables.");
   }
 
+  const { version } = config.app;
   const { name, primary_color, background_color, logo_path } = config.branding;
   if (
+    typeof version !== "string" ||
+    !/^\d+\.\d+\.\d+$/.test(version) ||
     typeof name !== "string" ||
     name.trim().length === 0 ||
     typeof primary_color !== "string" ||
@@ -30,6 +34,7 @@ export function parseBranding(source: string): Branding {
 
   return {
     name,
+    version,
     primaryColor: primary_color,
     backgroundColor: background_color,
     logoPath: logo_path,
