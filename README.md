@@ -67,6 +67,8 @@ are unsigned.
 
 Edit [`config/app.toml`](./config/app.toml) to change the frontend name, colors,
 and logo path. The file is loaded and validated by the frontend at runtime.
+Ember's pixel landscape and mark are original project artwork; the app does not
+ship Mojang textures, game logos, or other official Minecraft assets.
 
 ## Project notes
 

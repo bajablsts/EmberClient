@@ -117,8 +117,9 @@ button:disabled {
   flex: 0 0 auto;
   place-items: center;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 5px 16px color-mix(in srgb, var(--ember-accent) 22%, transparent);
+  border: 2px solid color-mix(in srgb, var(--ember-accent) 22%, transparent);
+  border-radius: 7px;
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--ember-accent) 18%, transparent);
 }
 
 .brand-mark img {
@@ -164,7 +165,7 @@ button:disabled {
   gap: 12px;
   padding: 0 12px;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 4px;
   background: transparent;
   color: var(--text-secondary);
   cursor: pointer;
@@ -444,9 +445,10 @@ button:disabled {
   height: 282px;
   overflow: hidden;
   isolation: isolate;
-  border: 1px solid #73504a4f;
-  border-radius: 13px;
+  border: 2px solid #d5a77c52;
+  border-radius: 5px;
   background: #30243b;
+  box-shadow: 0 5px 0 #111318, 0 6px 0 #3c303c;
 }
 
 .hero-art,
@@ -461,13 +463,14 @@ button:disabled {
 .hero-art {
   object-fit: cover;
   object-position: center 47%;
+  image-rendering: pixelated;
 }
 
 .hero-vignette {
   z-index: -1;
   background:
-    linear-gradient(90deg, #171820 0%, #171820ed 24%, #171820b8 43%, #17182012 80%),
-    linear-gradient(0deg, #17182077, transparent 30%);
+    linear-gradient(90deg, #171820 0%, #171820f2 26%, #171820c7 45%, #17182012 79%),
+    linear-gradient(0deg, #171820a6, transparent 42%);
 }
 
 .hero-copy {
@@ -482,6 +485,7 @@ button:disabled {
   align-items: center;
   gap: 8px;
   color: #d6cec7;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.13em;
@@ -497,7 +501,7 @@ button:disabled {
 .hero-copy h2 {
   margin: 22px 0 9px;
   color: #fcf4ec;
-  font-size: clamp(35px, 4.1vw, 47px);
+  font-size: clamp(35px, 4.1vw, 45px);
   font-weight: 640;
   letter-spacing: -0.06em;
   line-height: 0.99;
@@ -522,8 +526,8 @@ button:disabled {
   align-items: center;
   gap: 14px;
   padding: 0 12px;
-  border: 1px solid #ffab7b;
-  border-radius: 7px;
+  border: 2px solid #ffbf8b;
+  border-radius: 4px;
   background: #ffab7b;
   color: #30201a;
   cursor: pointer;
@@ -537,11 +541,33 @@ button:disabled {
   background: #ffc09a;
 }
 
+.button-pixel {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border: 2px solid #8a4d39;
+  background: #eaa66f;
+  box-shadow: 3px -3px 0 #ffe0a5;
+}
+
+.button-pixel::after {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 3px;
+  height: 3px;
+  background: #8a4d39;
+  content: "";
+}
+
 .hero-index {
   position: absolute;
   right: 20px;
   bottom: 17px;
-  color: #f3e5d37d;
+  color: #f3e5d3b0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 8px;
   font-weight: 650;
   letter-spacing: 0.12em;
@@ -565,7 +591,7 @@ button:disabled {
   height: 84px;
   padding: 12px 14px 10px;
   border: 1px solid var(--line);
-  border-radius: 9px;
+  border-radius: 5px;
   background: color-mix(in srgb, var(--surface-raised) 85%, transparent);
 }
 
@@ -577,6 +603,7 @@ button:disabled {
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.1em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 .status-indicator {
@@ -663,7 +690,7 @@ button:disabled {
   min-height: 130px;
   padding: 12px 13px 10px;
   border: 1px solid var(--line);
-  border-radius: 9px;
+  border-radius: 5px;
   background: color-mix(in srgb, var(--surface-raised) 86%, transparent);
   transition: transform 150ms ease, border-color 150ms ease;
 }
@@ -683,6 +710,7 @@ button:disabled {
 .roadmap-card-top > span {
   color: color-mix(in srgb, var(--ember-accent) 70%, var(--text-muted));
   font-size: 9px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-variant-numeric: tabular-nums;
 }
 
@@ -711,6 +739,7 @@ button:disabled {
   gap: 6px;
   margin-top: 9px;
   color: var(--text-secondary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 8px;
 }
 
@@ -1297,8 +1326,8 @@ button:disabled {
 
   .hero-vignette {
     background:
-      linear-gradient(90deg, #171820f5 0%, #171820dd 43%, #17182040 100%),
-      linear-gradient(0deg, #17182099, transparent 45%);
+      linear-gradient(90deg, #171820f5 0%, #171820e4 44%, #17182052 100%),
+      linear-gradient(0deg, #171820b0, transparent 45%);
   }
 
   .hero-copy {

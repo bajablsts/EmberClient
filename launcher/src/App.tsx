@@ -169,8 +169,8 @@ export default function App() {
 
         <div className="sidebar-spacer" />
         <div className="sidebar-note">
-          <span className="sidebar-note-icon"><Icon name="sun" size={17} /></span>
-          <span>Good things take time.</span>
+          <span className="sidebar-note-icon"><Icon name="layers" size={17} /></span>
+          <span>Every world has a story.</span>
           <span className="sidebar-note-dot" />
         </div>
         <div className="sidebar-bottom">
@@ -205,7 +205,7 @@ export default function App() {
         <div className="page-content">
           <div className="page-heading">
             <div>
-              <p className="section-kicker">EMBER CLIENT <span>·</span> EARLY PREVIEW</p>
+              <p className="section-kicker">MINECRAFT JAVA <span>·</span> EARLY PREVIEW</p>
               <h1>{pageCopy[page].title}</h1>
               <p>{pageCopy[page].subtitle}</p>
             </div>
@@ -284,34 +284,34 @@ function HomePage({ onOpenProfiles }: { onOpenProfiles: () => void }) {
         <img className="hero-art" src="/brand/ember-landscape.svg" alt="" />
         <div className="hero-vignette" />
         <div className="hero-copy">
-          <span className="hero-tag"><span /> MADE FOR YOUR NEXT ADVENTURE</span>
-          <h2>Make room<br />for <em>more.</em></h2>
-          <p>One calm place for your profiles, your mods, and the worlds you come back to.</p>
+          <span className="hero-tag"><span /> YOUR NEXT ADVENTURE STARTS HERE</span>
+          <h2>Build your<br /><em>next world.</em></h2>
+          <p>Make a home for every version, every modpack, and every world you call yours.</p>
           <button className="hero-button" type="button" onClick={onOpenProfiles}>
-            Set up your space <Icon name="arrow" size={17} />
+            <span className="button-pixel" aria-hidden="true" /> Open your profiles <Icon name="arrow" size={17} />
           </button>
         </div>
         <div className="hero-index"><span>01</span> / YOUR JOURNEY</div>
       </section>
 
       <section className="status-row" aria-label="Launcher status">
-        <StatusCard label="PROFILES" value="0" note="A fresh start" kind="ember" />
-        <StatusCard label="GAME VERSION" value="Not installed" note="Ready when you are" kind="neutral" />
-        <StatusCard label="ACCOUNT" value="Not connected" note="Sign-in is coming soon" kind="muted" />
+        <StatusCard label="YOUR WORLDS" value="Not yet generated" note="Your next save starts here" kind="ember" />
+        <StatusCard label="GAME VERSION" value="Not installed" note="Install support is coming soon" kind="neutral" />
+        <StatusCard label="PROFILE" value="No profile selected" note="Keep each setup separate" kind="muted" />
       </section>
 
       <section className="roadmap-section" id="roadmap">
         <div className="section-title-row">
           <div>
             <p className="section-kicker">THE ROAD AHEAD</p>
-            <h2>Built with care, one step at a time.</h2>
+            <h2>Everything for your next great session.</h2>
           </div>
           <span className="roadmap-label"><span /> PROJECT PREVIEW</span>
         </div>
         <div className="roadmap-grid">
-          <RoadmapCard number="01" title="Your profiles" detail="Separate settings and game folders for every play style." state="Coming next" />
-          <RoadmapCard number="02" title="Safe sign-in" detail="Official Microsoft authentication. No offline accounts." state="In the works" />
-          <RoadmapCard number="03" title="Mods & more" detail="Find compatible community content for each profile." state="On the roadmap" />
+          <RoadmapCard number="01" title="Separate worlds" detail="Keep versions, settings, saves, and mods in their own profiles." state="Coming next" />
+          <RoadmapCard number="02" title="One-click play" detail="Install the game and matching Java runtime from trusted sources." state="In the works" />
+          <RoadmapCard number="03" title="Community mods" detail="Find add-ons compatible with the profile you want to play." state="On the roadmap" />
         </div>
       </section>
     </>
